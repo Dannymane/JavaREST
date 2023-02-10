@@ -1,0 +1,584 @@
+{
+	"info": {
+		"_postman_id": "296dd01e-47a9-4156-b177-2eebb2bb7770",
+		"name": "New schedule",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24243074"
+	},
+	"item": [
+		{
+			"name": "rest/schedule/courses",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/rest/schedule/courses",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"rest",
+						"schedule",
+						"courses"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/rest/schedule",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"rest",
+								"schedule"
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"faculty\": \"it\",\n        \"degree\": [\n            {\n                \"degree\": \"I\",\n                \"session\": [\n                    {\n                        \"session\": \"1\",\n                        \"group\": [\n                            {\n                                \"groupId\": \"g1\",\n                                \"course\": [\n                                    {\n                                        \"course\": \"Mathematics\",\n                                        \"day\": \"Friday\",\n                                        \"Time\": \"12.15\",\n                                        \"Class\": 123\n                                    }\n                                ]\n                            }\n                        ]\n                    },\n                    {\n                        \"session\": \"2\",\n                        \"group\": [\n                            \"\"\n                        ]\n                    }\n                ]\n            },\n            {\n                \"degree\": \"II\",\n                \"session\": [\n                    {\n                        \"session\": \"1\",\n                        \"group\": [\n                            {\n                                \"groupId\": \"g1\",\n                                \"course\": [\n                                    {\n                                        \"course\": \"Mathematics\",\n                                        \"day\": \"Friday\",\n                                        \"Time\": \"12.15\",\n                                        \"Class\": 123\n                                    }\n                                ]\n                            }\n                        ]\n                    },\n                    {\n                        \"session\": \"2\",\n                        \"group\": [\n                            \"\"\n                        ]\n                    }\n                ]\n            }\n        ]\n    },\n    {\n        \"faculty\": \"Mechanical and Power Engineering\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "/rest/schedule/courses",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"courseName\":\"INF001\",\r\n    \"lessonName\":\"Informatics 1\",\r\n    \"day\":\"Monday\",\r\n    \"time\":\"14.15\",\r\n    \"classroom\":\"1B\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/rest/schedule/courses",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"rest",
+						"schedule",
+						"courses"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/rest/schedule/courses",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"rest",
+								"schedule",
+								"courses"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\r\n  \"course\":{\r\n\t\"courseName\":\"MAT001\",\r\n\t\"lessonName\":\"Mathamatics\",\r\n\t\"day\":\"Monday\",\r\n\t\"time\":\"12.15\",\r\n\t\"classroom\":\"1B\"\r\n  }\r\n}"
+				}
+			]
+		},
+		{
+			"name": "rest/schedule",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/rest/schedule",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"rest",
+						"schedule"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/rest/schedule",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"rest",
+								"schedule"
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"faculty\": \"it\",\n        \"degree\": [\n            {\n                \"degree\": \"I\",\n                \"session\": [\n                    {\n                        \"session\": \"1\",\n                        \"group\": [\n                            {\n                                \"groupId\": \"g1\",\n                                \"course\": [\n                                    {\n                                        \"course\": \"Mathematics\",\n                                        \"day\": \"Friday\",\n                                        \"Time\": \"12.15\",\n                                        \"Class\": 123\n                                    }\n                                ]\n                            }\n                        ]\n                    },\n                    {\n                        \"session\": \"2\",\n                        \"group\": [\n                            \"\"\n                        ]\n                    }\n                ]\n            },\n            {\n                \"degree\": \"II\",\n                \"session\": [\n                    {\n                        \"session\": \"1\",\n                        \"group\": [\n                            {\n                                \"groupId\": \"g1\",\n                                \"course\": [\n                                    {\n                                        \"course\": \"Mathematics\",\n                                        \"day\": \"Friday\",\n                                        \"Time\": \"12.15\",\n                                        \"Class\": 123\n                                    }\n                                ]\n                            }\n                        ]\n                    },\n                    {\n                        \"session\": \"2\",\n                        \"group\": [\n                            \"\"\n                        ]\n                    }\n                ]\n            }\n        ]\n    },\n    {\n        \"faculty\": \"Mechanical and Power Engineering\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "/rest/schedule/records",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"record\":{\r\n\t\"faculty\":\"MAT001\",\r\n\t\"degree\":\"Mathamatics 1\",\r\n\t\"session\":\"Monday\",\r\n\t\"groupId\":\"12.15\",\r\n\t\"courseName\":\"1B\"\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/rest/schedule/records",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"rest",
+						"schedule",
+						"records"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/rest/schedule/courses",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"rest",
+								"schedule",
+								"courses"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\r\n  \"course\":{\r\n\t\"courseName\":\"MAT001\",\r\n\t\"lessonName\":\"Mathamatics\",\r\n\t\"day\":\"Monday\",\r\n\t\"time\":\"12.15\",\r\n\t\"classroom\":\"1B\"\r\n  }\r\n}"
+				}
+			]
+		},
+		{
+			"name": "/rest/schedule/courses/MAT001",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/rest/schedule/courses/MAT001",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"rest",
+						"schedule",
+						"courses",
+						"MAT001"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/rest/schedule/?faculty={\"it\"}&degree={\"II\"}&session={\"1\"}gropId={\"g1\"}&course={\"Mathematics\"}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"rest",
+								"schedule",
+								""
+							],
+							"query": [
+								{
+									"key": "faculty",
+									"value": "{\"it\"}"
+								},
+								{
+									"key": "degree",
+									"value": "{\"II\"}"
+								},
+								{
+									"key": "session",
+									"value": "{\"1\"}gropId={\"g1\"}"
+								},
+								{
+									"key": "course",
+									"value": "{\"Mathematics\"}"
+								}
+							]
+						}
+					},
+					"code": 204,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "/rest/schedule/courses/MAT001",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "rest/schedule/groups/1/MAT001",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/rest/schedule/groups/1/MAT001",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"rest",
+						"schedule",
+						"groups",
+						"1",
+						"MAT001"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/rest/schedule/?faculty={\"it\"}&degree={\"II\"}&session={\"1\"}&gropId={\"g1\"}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"rest",
+								"schedule",
+								""
+							],
+							"query": [
+								{
+									"key": "faculty",
+									"value": "{\"it\"}"
+								},
+								{
+									"key": "degree",
+									"value": "{\"II\"}"
+								},
+								{
+									"key": "session",
+									"value": "{\"1\"}"
+								},
+								{
+									"key": "gropId",
+									"value": "{\"g1\"}"
+								}
+							]
+						}
+					},
+					"code": 204,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "rest/schedule/faculties/{faculty}",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/rest/schedule/faculties/{faculty}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"rest",
+						"schedule",
+						"faculties",
+						"{faculty}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/rest/schedule/?faculty={\"it\"}&degree={\"II\"}&session={\"1\"}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"rest",
+								"schedule",
+								""
+							],
+							"query": [
+								{
+									"key": "faculty",
+									"value": "{\"it\"}"
+								},
+								{
+									"key": "degree",
+									"value": "{\"II\"}"
+								},
+								{
+									"key": "session",
+									"value": "{\"1\"}"
+								}
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"groupId\": \"g1\",\n        \"course\": [\n            {\n                \"course\": \"Mathematics\",\n                \"day\": \"Friday\",\n                \"Time\": \"12.15\",\n                \"Class\": 123\n            }\n        ]\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "rest/schedule/faculties/{faculty}/degrees/{degree}",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "{{url}}/rest/schedule/courses/{courseName}",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"courseName\": \"DS001\",\r\n\"lessonName\": \"Database systems\",\r\n\"day\": \"Monday\",\r\n\"time\": \"12.15\",\r\n\"classroom\": \"2B\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/rest/schedule/courses/MAT001",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"rest",
+						"schedule",
+						"courses",
+						"MAT001"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
